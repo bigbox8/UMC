@@ -1,9 +1,0 @@
-type Venue {
-    id: ID!
-    externalId: FullExternalId!
-    name: String!
-}
-
-input SaveVenueInput {
-    name: String!
-}

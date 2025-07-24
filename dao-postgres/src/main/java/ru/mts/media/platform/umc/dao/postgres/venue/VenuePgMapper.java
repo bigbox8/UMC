@@ -10,20 +10,20 @@ import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
 
 @Mapper(componentModel = SPRING)
 public interface VenuePgMapper {
-    @Mapping(target = "externalId.brandId", source = "brand")
-    @Mapping(target = "externalId.providerId", source = "provider")
+    @Mapping(target = "externalId.brand", source = "brand")
+    @Mapping(target = "externalId.provider", source = "provider")
     @Mapping(target = "externalId.externalId", source = "externalId")
     @Mapping(target = "id", source = "referenceId")
     Venue asModel(VenuePgEntity venuePg);
 
     @Mapping(target = "referenceId", source = "id")
-    @Mapping(target = "brand", source = "externalId.brandId")
-    @Mapping(target = "provider", source = "externalId.providerId")
+    @Mapping(target = "brand", source = "externalId.brand")
+    @Mapping(target = "provider", source = "externalId.provider")
     @Mapping(target = "externalId", source = "externalId.externalId")
     VenuePgEntity asEntity(Venue venue);
 
-    @Mapping(target = "brand", source = "brandId")
-    @Mapping(target = "provider", source = "providerId")
+    @Mapping(target = "brand", source = "brand")
+    @Mapping(target = "provider", source = "provider")
     @Mapping(target = "externalId", source = "externalId")
     FullExternalIdPk asPk(FullExternalId fullExternalId);
 }

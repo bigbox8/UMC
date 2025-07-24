@@ -3,6 +3,7 @@ package ru.mts.media.platform.umc.dao.postgres.venue;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import ru.mts.media.platform.umc.dao.postgres.common.FullExternalIdPk;
 import ru.mts.media.platform.umc.domain.gql.types.FullExternalId;
 import ru.mts.media.platform.umc.domain.gql.types.Venue;
 import ru.mts.media.platform.umc.domain.venue.VenueSave;
